@@ -41,6 +41,9 @@ setWhosNext(!whosNext)
         <div>
             <h1>Tic-Tac-Toe</h1>
             <Board squares={gameHistory[moveNumber]} onClick={handler} />
+            <div>
+                <h2>{winner ? "The winner is : " +winner : "Player Turn: " + ImNext}</h2>
+            </div>
         </div>
     )
 }
