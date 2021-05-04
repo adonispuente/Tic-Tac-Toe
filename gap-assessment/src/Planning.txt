@@ -39,4 +39,3 @@ Possible Test?
 -can make an X
 -can make an O
 -can see if theres a winner
--can see if theres a loser
