@@ -23,6 +23,7 @@ Notes -
 - for the isXnext
     - const playerTurn = isNext ? "X" : "O";
 -passing everything down with props since its not many levels
+- Going to have to build from square up at the start
 
 
 
