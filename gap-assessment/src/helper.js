@@ -15,7 +15,7 @@ export function calculateWinner(squares) {
         return `${squares[a]} is the Winner!`;
       }
       else if (!squares.includes(null)){
-          return 'Its a Tie'
+          return 'Its a Tie :/'
       }
     }
 
