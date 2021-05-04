@@ -3,6 +3,11 @@ body {
   display: flex;
   justify-content: center;
   font-family: "Poppins", "arial";
+  background-image: url(./bgAnimation.svg);
+}
+
+.bgSVG {
+  width: 100%;
 }
 
 .wrapper {
@@ -68,6 +73,23 @@ li {
 }
 .playerTurn {
   height: 100px;
+}
+
+.X:hover {
+  animation: markingGrowth 1s infinite alternate;
+}
+
+.O:hover {
+  animation: markingGrowth 1s infinite alternate;
+}
+
+@keyframes markingGrowth {
+  0% {
+    font-size: 3em;
+  }
+  100% {
+    font-size: 3.9em;
+  }
 }
 
 @keyframes textgrowth {
