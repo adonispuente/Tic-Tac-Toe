@@ -6,7 +6,7 @@ const Square = ({value, onClick})=>{
     const marking = value ? `squares ${value}` : `sqaures`;
 
     return(
-        <button onClick ={onClick}>
+        <button className={marking} onClick ={onClick}>
             {value}
         </button>
     )
