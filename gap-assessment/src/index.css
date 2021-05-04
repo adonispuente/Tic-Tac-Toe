@@ -66,6 +66,9 @@ li {
 .gameText {
   animation: textgrowth 1s infinite alternate;
 }
+.playerTurn {
+  height: 100px;
+}
 
 @keyframes textgrowth {
   0% {
