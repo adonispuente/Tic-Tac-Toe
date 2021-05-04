@@ -72,3 +72,23 @@ it('Produce a Win in the Game',()=>{
     
 })
 //passed
+
+it('History buttons show up an accurate number of times',()=>{
+    const container = renderGame();
+    const allSqaures = container.find('Square');
+    //X,O,null - first row
+    allSqaures.at(0).simulate("click")
+    allSqaures.at(1).simulate("click")
+
+    //X,O, null - second row
+    allSqaures.at(3).simulate("click")
+    allSqaures.at(4).simulate("click")
+
+    //O,X,null third row
+    allSqaures.at(6).simulate("click")
+    allSqaures.at(7).simulate("click")
+
+    //15 because each square is a button
+    expect(container.find("button").length).toBe(15)
+    
+})
