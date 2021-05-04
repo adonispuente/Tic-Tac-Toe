@@ -65,9 +65,9 @@ li {
 }
 
 .marking1 {
-  animation: infinte 2s alternate-reverse;
+  animation: Xanimation infinte 2s alternate-reverse;
 }
 
 .marking2 {
-  animation: infinte 2s alternate-reverse;
+  animation: Oanimation infinte 2s alternate-reverse;
 }
