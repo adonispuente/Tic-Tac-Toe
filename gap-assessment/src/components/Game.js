@@ -55,7 +55,7 @@ const populateMoves = () =>
     <div>
 
             
-        <div className="box overlay">
+        <div >
             <div className="wrapper">
                 <h1 >Tic-Tac-Toe</h1>
                 <Board squares={gameHistory[moveNumber]} onClick={handler} id='BoardGame'/>
