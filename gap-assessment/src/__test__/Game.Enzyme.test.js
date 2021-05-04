@@ -93,3 +93,31 @@ it('History buttons show up an accurate number of times',()=>{
     
 })
 //passed
+
+it('empty board after pressing go to start',()=>{
+    const container = renderGame();
+    const allSqaures = container.find('Square');
+    const goToStart = container.find('button').at(10)
+    //X,O,null - first row
+    allSqaures.at(0).simulate("click")
+    allSqaures.at(1).simulate("click")
+
+    //X,O, null - second row
+    allSqaures.at(3).simulate("click")
+    allSqaures.at(4).simulate("click")
+
+    //O,X,null third row
+    allSqaures.at(6).simulate("click")
+    allSqaures.at(7).simulate("click")
+
+    goToStart.simulate("click")
+
+    expect(allSqaures.at(0).text()).toBe(null)
+    expect(allSqaures.at(1).text()).toBe(null)
+    expect(allSqaures.at(3).text()).toBe(null)
+    expect(allSqaures.at(4).text()).toBe(null)
+    expect(allSqaures.at(6).text()).toBe(null)
+    expect(allSqaures.at(7).text()).toBe(null)
+
+    
+})
