@@ -58,6 +58,7 @@ li {
   display: flex;
   width: 350px;
   justify-content: space-around;
+  margin: 0 auto;
 }
 
 #historyBtn {
