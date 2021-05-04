@@ -1,5 +1,6 @@
 import React ,{useState} from "react"
 import Board from "./Board"
+import {calculateWinner} from '../helper'
 
 //need to find a way to calculate the winner
 /*  
@@ -16,6 +17,7 @@ const [moveNumber, setMoveNumber] = useState(0)
 const [whosNext, setWhosNext]= useState(true)
 //need a way to add logic for the whos next, use ternerary, we can slap on those strings with template literal 
 const ImNext = whosNext? "X" : "O"
+const winner = calculateWinner(gameHistory[moveNumber])
 
 //Going to have to update the state here
 const handler =(index)=>{
@@ -25,6 +27,7 @@ const PointInGame = gameHistory.slice(0,moveNumber+1)
 //this will tell us exactly where we are in the game at the moment, just to have something to eventually update whos Next
 const currently = PointInGame[moveNumber]
 const squares = [...currently]
+if (winner|| squares[index]) return
 //the classes will just keep going back and forth, so we jsut set that specific square to whatever ImNext is at the moment
 squares[index] = ImNext
 //update the history with the point in game, move numbers, and whosNext to be the opposite of whatever it was
@@ -33,12 +36,50 @@ setMoveNumber(PointInGame.length)
 setWhosNext(!whosNext)
 }
 
+const jumpTo = (step)=>{
+    setMoveNumber(step)
+    setWhosNext(step %2 ===0)
+}
+const populateMoves = () => 
+    gameHistory.map((step,move)=>{
+            const location = move ? `go to move#: ${move}` : "Go to Start"
+            return(
+                <li key={move}>
+                    <button id="historyBtn" onClick={()=> jumpTo(move)}>{location}</button>
+                </li>
+            )
+    })
+
 
     return(
-        <div>
-            <h1>Tic-Tac-Toe</h1>
-            <Board squares={gameHistory[moveNumber]} onClick={handler} />
+    <div className="flex">
+        <div className='decorX'>
+            <h1>X</h1>
         </div>
+
+            
+        <div >
+            <div className="wrapper">
+                <h1 >Tic-Tac-Toe</h1>
+                <Board squares={gameHistory[moveNumber]} onClick={handler} id='BoardGame'/>
+                <div className='playerTurn'>
+                    <h2 className='gameText' id='testh2'>{winner ? winner : "Player Turn: " + ImNext}</h2>
+                </div>
+                
+            </div>
+            <div className="history">
+                <h2 >Game History</h2>
+                <div className="contain">
+                {populateMoves()}
+                </div>
+            
+            </div>
+        </div>
+        <div className='decorO'>
+            <h1>O</h1>
+        </div>
+            
+    </div>
     )
 }
 
