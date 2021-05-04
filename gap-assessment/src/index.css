@@ -21,6 +21,12 @@ body {
   width: 400px;
 }
 
+.squares {
+  background: #fff;
+  font-size: 3em;
+  border: none;
+}
+
 .X {
   color: #a5a5a5;
 }
@@ -28,11 +34,14 @@ body {
 .O {
   color: #5da9e9;
 }
+.decorX {
+  font-size: 8em;
+  color: #a5a5a5;
+}
 
-.squares {
-  background: #fff;
-  font-size: 3em;
-  border: none;
+.decorO {
+  font-size: 8em;
+  color: #5da9e9;
 }
 
 li {

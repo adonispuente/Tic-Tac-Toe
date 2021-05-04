@@ -53,6 +53,9 @@ const populateMoves = () =>
 
     return(
     <div>
+        <div className='decorX'>
+            <h1>X</h1>
+        </div>
 
             
         <div >
@@ -71,6 +74,9 @@ const populateMoves = () =>
                 </div>
             
             </div>
+        </div>
+        <div className='decorO'>
+            <h1>O</h1>
         </div>
             
     </div>
