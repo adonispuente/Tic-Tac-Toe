@@ -37,3 +37,4 @@ it('Should render 1 button',()=>{
     expect(container.find("button").length).toBe(1)
 })
 //passes
+
