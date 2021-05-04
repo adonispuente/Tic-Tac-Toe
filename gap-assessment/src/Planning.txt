@@ -5,9 +5,9 @@ allow for rewinding of moves. The game should be able to be reset without
 stopping the application. Styling should be used for a pleasing aesthetic.
 The use of multiple small components is valued.
 Additionally, you must:
+
 - Write all code personally
 - Test Drive all changes
-( http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd ) - broken link
 - Utilize Jest or Mocha
 - Utilize Enzyme for Component Testing
 - Utilize public GitHub repo
