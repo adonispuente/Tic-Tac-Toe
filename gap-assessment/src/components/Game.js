@@ -42,7 +42,7 @@ const jumpTo = (step)=>{
 }
 const populateMoves = () => 
     gameHistory.map((step,move)=>{
-            const location = move ? `got to move#: ${move}` : "Go to Start"
+            const location = move ? `go to move#: ${move}` : "Go to Start"
             return(
                 <li key={move}>
                     <button id="historyBtn" onClick={()=> jumpTo(move)}>{location}</button>
