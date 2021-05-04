@@ -53,7 +53,7 @@ const populateMoves = () =>
 
     return(
         <div className="wrapper">
-            <h1>Tic-Tac-Toe</h1>
+            <h1 className='gameText'>Tic-Tac-Toe</h1>
             <Board squares={gameHistory[moveNumber]} onClick={handler} id='BoardGame'/>
             <div>
                 <h2 id='testh2'>{winner ? winner : "Player Turn: " + ImNext}</h2>
