@@ -50,5 +50,5 @@ it('Produce a Tie in the Game',()=>{
 
 
 
-    expect(container.find("h2").text()).toBe("Its a Tie :/")
+    expect(container.find("#testh2").text()).toBe("Its a Tie :/")
 })
