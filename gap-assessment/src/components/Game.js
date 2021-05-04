@@ -52,7 +52,7 @@ const populateMoves = () =>
 
 
     return(
-    <div>
+    <div className="flex">
         <div className='decorX'>
             <h1>X</h1>
         </div>
