@@ -23,3 +23,4 @@ it('Should render Game component header',()=>{
     const container = renderGame();
     expect(container.find("h1").text()).toEqual("Tic-Tac-Toe")
 })
+//passes
