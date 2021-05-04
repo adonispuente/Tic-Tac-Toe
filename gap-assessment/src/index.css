@@ -1,0 +1,27 @@
+body {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.board {
+  border: 1em solid #000;
+  background: #000;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 1em;
+  height: 400px;
+  width: 400px;
+}
+
+.X {
+  color: #a5a5a5;
+}
+
+.O {
+  color: #5da9e9;
+}
+
+.squares {
+  background: #fff;
+}
