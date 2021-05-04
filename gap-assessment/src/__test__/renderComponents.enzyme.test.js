@@ -36,3 +36,4 @@ it('Should render 1 button',()=>{
     const container = renderGame();
     expect(container.find("button").length).toBe(1)
 })
+//passes
