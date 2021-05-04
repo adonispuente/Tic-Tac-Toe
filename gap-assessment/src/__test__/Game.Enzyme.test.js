@@ -47,8 +47,7 @@ it('Produce a Tie in the Game',()=>{
 
     //O,X,X - third row
     allSqaures.at(8).simulate("click")
-
-
-
     expect(container.find("#testh2").text()).toBe("Its a Tie :/")
+    
 })
+//passed
