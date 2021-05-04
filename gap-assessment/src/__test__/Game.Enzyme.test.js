@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Children } from "react"
 import Game from "../components/Game"
 import {mount} from "enzyme"
 
@@ -97,7 +97,7 @@ it('History buttons show up an accurate number of times',()=>{
 it('empty board after pressing go to start',()=>{
     const container = renderGame();
     const allSqaures = container.find('Square');
-    const goToStart = container.find('button').at(10)
+    const goToStart = container.find("button").at(10)
     //X,O,null - first row
     allSqaures.at(0).simulate("click")
     allSqaures.at(1).simulate("click")

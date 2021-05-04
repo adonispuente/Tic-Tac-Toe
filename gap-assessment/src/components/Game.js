@@ -45,7 +45,7 @@ const populateMoves = () =>
             const location = move ? `got to move#: ${move}` : "Go to Start"
             return(
                 <li key={move}>
-                    <button onClick={()=> jumpTo(move)}>{location}</button>
+                    <button id="historyBtn" onClick={()=> jumpTo(move)}>{location}</button>
                 </li>
             )
     })
