@@ -52,12 +52,15 @@ const populateMoves = () =>
 
 
     return(
-        <div className="bgSVG">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1836" height="1175" viewBox="0 0 1836 1175">
-  <text className="marking1" id="O" transform="translate(1300 250)" fill="#5da9e9" font-size="300" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="0">O</tspan></text>
-  <text className="marking2" id="X" transform="translate(100 900)" fill="#707070" font-size="300" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="0">X</tspan></text>
-</svg>
-
+        <div>
+            <div className="box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1836" height="1175" viewBox="0 0 1836 1175">
+                    <text className="marking1" id="O" transform="translate(1300 250)" fill="#5da9e9" font-size="300" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="0">O</tspan></text>
+                    <text className="marking2" id="X" transform="translate(100 900)" fill="#707070" font-size="300" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="0">X</tspan></text>
+                </svg>
+            </div>
+            
+            <div className="box overlay">
             <div className="wrapper">
                 <h1 >Tic-Tac-Toe</h1>
                 <Board squares={gameHistory[moveNumber]} onClick={handler} id='BoardGame'/>
@@ -73,6 +76,8 @@ const populateMoves = () =>
                 </div>
             
             </div>
+            </div>
+            
     </div>
     )
 }
