@@ -1,0 +1,41 @@
+Create a ReactJS Web application for the game of tic-tac-toe. The game
+should be a playable web application. It should prompt users for their turn.
+The game should determine the winner or if there is a tie. The game should
+allow for rewinding of moves. The game should be able to be reset without
+stopping the application. Styling should be used for a pleasing aesthetic.
+The use of multiple small components is valued.
+Additionally, you must:
+- Write all code personally
+- Test Drive all changes
+( http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd ) - broken link
+- Utilize Jest or Mocha
+- Utilize Enzyme for Component Testing
+- Utilize public GitHub repo
+- Commit after writing each test
+- Commit after making each test pass
+- Done correctly you should have around 100 commits
+
+
+Notes - 
+-install enzyme make sure it works,
+-Uses classes in the squares, the sqaures wil be an array of buttons with an index
+- useState to manage the gameHistory, MoveNumber, probably one for isXnext (set to true) and build conditional logic for the O, calculate winner helper function
+- for the isXnext
+    - const playerTurn = isNext ? "X" : "O";
+-passing everything down with props since its not many levels
+
+
+
+File Structure -
+components 
+    - Game - all logic done here, will have to pass things down to board and then square
+    -Board - pretty simple, just make an array of squares while passing down props
+    - squares - pass downed value and onClick method. similar to board we use ternerary to assign a marking with a class. it'll always have the square class though
+
+
+Possible Test?
+-render the game
+-can make an X
+-can make an O
+-can see if theres a winner
+-can see if theres a loser
