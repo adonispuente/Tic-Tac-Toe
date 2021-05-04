@@ -118,6 +118,5 @@ it('empty board after pressing go to start',()=>{
     expect(allSqaures.at(4).text()).toBe("")
     expect(allSqaures.at(6).text()).toBe("")
     expect(allSqaures.at(7).text()).toBe("")
-
-    
 })
+//passed
