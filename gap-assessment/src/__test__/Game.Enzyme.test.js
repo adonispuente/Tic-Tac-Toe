@@ -68,7 +68,7 @@ it('Produce a Win in the Game',()=>{
     allSqaures.at(7).simulate("click")
 
     
-    expect(container.find("#testh2").text()).toBe("X is the Winner")
+    expect(container.find("#testh2").text()).toBe("X is the Winner!")
     
 })
 
