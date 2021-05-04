@@ -6,14 +6,16 @@ body {
 
 .board {
   border: 1em solid #000;
-  background: #a5a5a5;
+  background: #000;
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
   gap: 1em;
+  height: 400px;
+  width: 400px;
 }
 
 .X {
-  color: #fff;
+  color: #a5a5a5;
 }
 
 .O {
