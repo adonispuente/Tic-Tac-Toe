@@ -57,3 +57,9 @@ li {
   letter-spacing: 2px;
   cursor: pointer;
 }
+
+#historyBtn:hover {
+  background: #5da9e9;
+  color: #fff;
+  border: #fff;
+}
