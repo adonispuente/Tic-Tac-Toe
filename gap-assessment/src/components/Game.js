@@ -52,20 +52,23 @@ const populateMoves = () =>
 
 
     return(
-        <div className="wrapper">
-            <h1 className='gameText'>Tic-Tac-Toe</h1>
-            <Board squares={gameHistory[moveNumber]} onClick={handler} id='BoardGame'/>
-            <div>
-                <h2 id='testh2'>{winner ? winner : "Player Turn: " + ImNext}</h2>
+        <div>
+            <div className="wrapper">
+                <h1 >Tic-Tac-Toe</h1>
+                <Board squares={gameHistory[moveNumber]} onClick={handler} id='BoardGame'/>
+                <div>
+                    <h2 className='gameText' id='testh2'>{winner ? winner : "Player Turn: " + ImNext}</h2>
+                </div>
+                
             </div>
             <div className="history">
                 <h2 >Game History</h2>
                 <div className="contain">
                 {populateMoves()}
                 </div>
-                
+            
             </div>
-        </div>
+    </div>
     )
 }
 
