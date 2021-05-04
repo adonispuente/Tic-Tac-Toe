@@ -3,7 +3,6 @@ body {
   display: flex;
   justify-content: center;
   font-family: "Poppins", "arial";
-  /* background-image: url(./bgAnimation.svg); */
 }
 
 .wrapper {
