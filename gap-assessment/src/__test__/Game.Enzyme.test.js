@@ -24,3 +24,31 @@ it('marking X, then O',()=>{
     expect(allSqaures.at(1).text()).toBe("O")
 })
 //passed
+
+it('Produce a Tie in the Game',()=>{
+    const container = renderGame();
+    const allSqaures = container.find('Square');
+    //X,O,null - first row
+    allSqaures.at(0).simulate("click")
+    allSqaures.at(1).simulate("click")
+
+    //X,O, null - second row
+    allSqaures.at(3).simulate("click")
+    allSqaures.at(4).simulate("click")
+
+    //O,X,null third row
+    allSqaures.at(7).simulate("click")
+    allSqaures.at(6).simulate("click")
+
+    //X,O,X - first row
+    allSqaures.at(2).simulate("click")
+    //X,O,O - second row
+    allSqaures.at(5).simulate("click")
+
+    //O,X,X - third row
+    allSqaures.at(8).simulate("click")
+
+
+
+    expect(container.find("h2").text()).toBe("Its a Tie :/")
+})
