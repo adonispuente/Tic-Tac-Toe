@@ -58,7 +58,7 @@ const populateMoves = () =>
             <div>
                 <h2 id='testh2'>{winner ? winner : "Player Turn: " + ImNext}</h2>
             </div>
-            <div>
+            <div className="history">
                 <h2 >Game History</h2>
                 {populateMoves()}
             </div>
