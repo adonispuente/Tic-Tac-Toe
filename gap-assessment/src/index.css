@@ -38,3 +38,7 @@ body {
 li {
   list-style: none;
 }
+
+#historyBtn {
+  min-width: 120px;
+}

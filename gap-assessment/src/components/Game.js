@@ -60,7 +60,10 @@ const populateMoves = () =>
             </div>
             <div className="history">
                 <h2 >Game History</h2>
+                <div className="contain">
                 {populateMoves()}
+                </div>
+                
             </div>
         </div>
     )
