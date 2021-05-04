@@ -97,7 +97,7 @@ it('History buttons show up an accurate number of times',()=>{
 it('empty board after pressing go to start',()=>{
     const container = renderGame();
     const allSqaures = container.find('Square');
-    const goToStart = container.find("button").at(10)
+    const goToStart = container.find("#historyBtn").at(0)
     //X,O,null - first row
     allSqaures.at(0).simulate("click")
     allSqaures.at(1).simulate("click")
@@ -112,12 +112,12 @@ it('empty board after pressing go to start',()=>{
 
     goToStart.simulate("click")
 
-    expect(allSqaures.at(0).text()).toBe(null)
-    expect(allSqaures.at(1).text()).toBe(null)
-    expect(allSqaures.at(3).text()).toBe(null)
-    expect(allSqaures.at(4).text()).toBe(null)
-    expect(allSqaures.at(6).text()).toBe(null)
-    expect(allSqaures.at(7).text()).toBe(null)
+    expect(allSqaures.at(0).text()).toBe("")
+    expect(allSqaures.at(1).text()).toBe("")
+    expect(allSqaures.at(3).text()).toBe("")
+    expect(allSqaures.at(4).text()).toBe("")
+    expect(allSqaures.at(6).text()).toBe("")
+    expect(allSqaures.at(7).text()).toBe("")
 
     
 })
