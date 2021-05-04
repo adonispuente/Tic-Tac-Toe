@@ -51,3 +51,24 @@ it('Produce a Tie in the Game',()=>{
     
 })
 //passed
+
+it('Produce a Win in the Game',()=>{
+    const container = renderGame();
+    const allSqaures = container.find('Square');
+    //X,O,null - first row
+    allSqaures.at(0).simulate("click")
+    allSqaures.at(1).simulate("click")
+
+    //X,O, null - second row
+    allSqaures.at(3).simulate("click")
+    allSqaures.at(4).simulate("click")
+
+    //O,X,null third row
+    allSqaures.at(6).simulate("click")
+    allSqaures.at(7).simulate("click")
+
+    
+    expect(container.find("#testh2").text()).toBe("X is the Winner")
+    
+})
+
