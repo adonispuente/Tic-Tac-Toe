@@ -39,6 +39,12 @@ li {
   list-style: none;
 }
 
+.history {
+  display: flex;
+  width: 350px;
+  justify-content: space-around;
+}
+
 #historyBtn {
   min-width: 120px;
 }
