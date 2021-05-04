@@ -63,3 +63,11 @@ li {
   color: #fff;
   border: #fff;
 }
+
+.marking1 {
+  animation: infinte 2s alternate-reverse;
+}
+
+.marking2 {
+  animation: infinte 2s alternate-reverse;
+}
