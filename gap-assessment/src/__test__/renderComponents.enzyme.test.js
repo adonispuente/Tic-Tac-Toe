@@ -31,3 +31,8 @@ it('Should render 2 h2s , player turn and game history',()=>{
     expect(container.find("h2").length).toBe(2)
 })
 //passes
+
+it('Should render 1 button',()=>{
+    const container = renderGame();
+    expect(container.find("button").length).toBe(1)
+})
