@@ -6,7 +6,7 @@ import Square from "./Square"
 const Board =({ sqaures, onClick})=> {
     <div>
         {sqaures.map((square,index)=>(
-            <Square key={index} value={square} onClick={()=> onClick(i)}/>
+            <Square key={index} value={square} onClick={()=> onClick(index)}/>
         ))}
     </div>
 }
