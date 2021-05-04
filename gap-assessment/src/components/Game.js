@@ -56,10 +56,10 @@ const populateMoves = () =>
             <h1>Tic-Tac-Toe</h1>
             <Board squares={gameHistory[moveNumber]} onClick={handler} id='BoardGame'/>
             <div>
-                <h2>{winner ? winner : "Player Turn: " + ImNext}</h2>
+                <h2 id='testh2'>{winner ? winner : "Player Turn: " + ImNext}</h2>
             </div>
             <div>
-                <h2 id='testh2'>Game History</h2>
+                <h2 >Game History</h2>
                 {populateMoves()}
             </div>
         </div>
