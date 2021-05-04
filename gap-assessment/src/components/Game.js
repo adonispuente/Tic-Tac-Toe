@@ -36,6 +36,20 @@ setMoveNumber(PointInGame.length)
 setWhosNext(!whosNext)
 }
 
+const jumpTo = (step)=>{
+    setMoveNumber(step)
+    setWhosNext(step %2 ===0)
+}
+const populateMoves = () => 
+    gameHistory.map((step,move)=>{
+            const location = move ? `got to move#: ${move}` : "Go to Start"
+            return(
+                <li key={move}>
+                    <button onClick={()=> jumpTo(move)}>{location}</button>
+                </li>
+            )
+    })
+
 
     return(
         <div>
@@ -46,7 +60,7 @@ setWhosNext(!whosNext)
             </div>
             <div>
                 <h2>Game History</h2>
-                
+                {populateMoves()}
             </div>
         </div>
     )
