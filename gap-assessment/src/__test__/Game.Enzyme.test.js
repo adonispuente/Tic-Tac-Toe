@@ -13,5 +13,5 @@ it('Should allow me to click a square, marking X',()=>{
     const container = renderGame();
     const allSqaures = container.find('Square');
     allSqaures.at(0).simulate("click")
-    expect(allSqaures.at(0).toBe("X"))
+    expect(allSqaures.at(0).text()).toBe("X")
 })
