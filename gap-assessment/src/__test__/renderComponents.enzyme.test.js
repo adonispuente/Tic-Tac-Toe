@@ -26,3 +26,8 @@ it('Should render Game component header',()=>{
 //passes
 
 
+it('Should render 2 h2s , player turn and game history',()=>{
+    const container = renderGame();
+    expect(container.find("h2").length).toBe(2)
+})
+//passes
